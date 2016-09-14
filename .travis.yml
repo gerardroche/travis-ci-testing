@@ -3,11 +3,14 @@ language: php
 php:
   - 5.6
 
+services:
+  - mysql
+
 install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/travis-10.ini
+  - phpenv config-add test/travis_10.ini
   - php --ini
   - php -i
 
