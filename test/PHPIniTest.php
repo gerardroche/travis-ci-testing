@@ -4,9 +4,9 @@ namespace GerardRoche\TravisCITesting;
 
 class PHPIniTest extends \PHPUnit_Framework_TestCase
 {
-    public function testTimezone()
+    public function testErrorReporting()
     {
-        $this->assertSame('UTC', ini_get('date.timezone'));
+        $this->assertSame('-1', ini_get('error_reporting'));
     }
 
     public function testDisplayErrors()
@@ -19,9 +19,14 @@ class PHPIniTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('1', ini_get('display_startup_errors'));
     }
 
-    public function testErrorReporting()
+    public function testTimezone()
     {
-        $this->assertSame('-1', ini_get('error_reporting'));
+        $this->assertSame('UTC', ini_get('date.timezone'));
+    }
+
+    public function testMimeType()
+    {
+        $this->assertSame('text/html', ini_get('default_mimetype'));
     }
 
     public function testDefaultCharset()
