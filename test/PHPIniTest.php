@@ -23,4 +23,25 @@ class PHPIniTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame('-1', ini_get('error_reporting'));
     }
+
+    public function testDefaultCharset()
+    {
+        var_dump(ini_get('default_charset'));
+        $this->assertSame('UTF-8', ini_get('default_charset'));
+    }
+
+    public function testIconvInternalEncoding()
+    {
+        $this->assertSame('UTF-8', ini_get('iconv.internal_encoding'));
+    }
+
+    public function testIconvInputEncoding()
+    {
+        $this->assertSame('UTF-8', ini_get('iconv.input_encoding'));
+    }
+
+    public function testIconvOutputEncoding()
+    {
+        $this->assertSame('UTF-8', ini_get('iconv.output_encoding'));
+    }
 }

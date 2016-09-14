@@ -5,7 +5,6 @@ php:
 
 env:
   - PHPUNIT_XML=
-  - PHPUNIT_XML=_mysql
 
 install:
   - composer -vvv install
