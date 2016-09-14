@@ -10,9 +10,11 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/travis_10.ini
+  - phpenv config-add test/travis-10.ini
   - php --ini
   - php -i
+  - vendor/bin/phpunit --version
+  - mysql --version
 
 script:
-  - vendor/bin/phpunit -v -c phpunit.xml.dist --coverage-text
+  - vendor/bin/phpunit --configuration phpunit.xml.dist --verbose --coverage-text
