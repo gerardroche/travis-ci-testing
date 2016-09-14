@@ -10,10 +10,10 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add travis.ini
+  - phpenv config-add test/travis.ini
+  - php -i | grep timezone
 
 script:
-  - php -i
   - vendor/bin/phpunit -v -c "phpunit${PHPUNIT_XML}.xml.dist" --coverage-text
 
 cache:
