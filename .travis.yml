@@ -7,7 +7,7 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/ztravis.ini
+  - phpenv config-add test/travis-10.ini
   - php --ini
   - php -i
 
