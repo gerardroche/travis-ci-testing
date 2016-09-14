@@ -10,4 +10,6 @@ script:
   - vendor/bin/phpunit --verbose
 
 cache:
-  - composer
+  directories:
+    - $HOME/.cache/composer/files
+    - $HOME/.composer/cache
