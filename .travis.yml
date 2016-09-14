@@ -9,3 +9,5 @@ install:
 
 script:
   - vendor/bin/phpunit --verbose
+
+cache: composer
