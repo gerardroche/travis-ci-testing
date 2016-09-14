@@ -4,4 +4,7 @@ php:
   5.5
 
 install:
-  - composer install
+  - composer -vvv install
+
+script:
+  - vendor/bin/phpunit --verbose
