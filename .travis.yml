@@ -7,8 +7,10 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/arbitraryname.ini
-  - phpenv config-add test/zarbitraryname.ini
+  - phpenv config-add test/zx.ini
+  - phpenv config-add test/9-x.ini
+  - phpenv config-add test/ax.ini
+  - phpenv config-add test/9x.ini
   - php --ini
   - php -i
 
