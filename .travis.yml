@@ -7,10 +7,8 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/zx.ini
-  - phpenv config-add test/9-x.ini
-  - phpenv config-add test/ax.ini
-  - phpenv config-add test/9x.ini
+  - phpenv config-add test/10-x.ini
+  - phpenv config-add test/20-x.ini
   - php --ini
   - php -i
 
