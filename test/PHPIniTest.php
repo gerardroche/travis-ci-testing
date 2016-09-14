@@ -23,6 +23,7 @@ class PHPIniTest extends \PHPUnit_Framework_TestCase
     {
         var_dump(explode(',', php_ini_scanned_files()));
         var_dump(ini_get('date.timezone'));
+        var_dump(file_get_contents('/home/travis/.phpenv/versions/5.6.5/etc/conf.d/travis.ini'));
         $this->assertSame('UTC', ini_get('date.timezone'));
     }
 
