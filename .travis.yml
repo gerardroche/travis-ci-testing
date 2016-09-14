@@ -10,7 +10,7 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/travis-10.ini
+  - phpenv config-add test/travis_90.ini
   - php --ini
   - php -i
   - vendor/bin/phpunit --version
@@ -19,3 +19,8 @@ before_script:
 
 script:
   - vendor/bin/phpunit --configuration phpunit.xml.dist --verbose --coverage-text
+
+cache:
+  directories:
+    - $HOME/.cache/composer
+    - $HOME/.composer/cache
