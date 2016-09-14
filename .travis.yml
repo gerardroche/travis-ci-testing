@@ -12,9 +12,9 @@ install:
 before_script:
   - phpenv config-add 99-travis.ini
   - echo 'date.timezone = "Europe/Paris"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/90-travis.ini
-  - php -i | grep datetime
 
 script:
+  - php -i
   - vendor/bin/phpunit -v -c "phpunit${PHPUNIT_XML}.xml.dist" --coverage-text
 
 cache:
