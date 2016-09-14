@@ -14,8 +14,3 @@ before_script:
 
 script:
   - vendor/bin/phpunit -v -c "phpunit${PHPUNIT_XML}.xml.dist" --coverage-text
-
-cache:
-  directories:
-    - $HOME/.cache/composer
-    - $HOME/.composer/cache
