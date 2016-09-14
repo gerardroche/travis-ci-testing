@@ -26,7 +26,6 @@ class PHPIniTest extends \PHPUnit_Framework_TestCase
 
     public function testDefaultCharset()
     {
-        var_dump(ini_get('default_charset'));
         $this->assertSame('UTF-8', ini_get('default_charset'));
     }
 
