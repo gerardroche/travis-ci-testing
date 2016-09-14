@@ -10,7 +10,7 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/travis.ini
+  - phpenv config-add test/90travis.ini
   - php -i | grep timezone
 
 script:
