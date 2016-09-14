@@ -15,6 +15,7 @@ before_script:
   - php -i
   - vendor/bin/phpunit --version
   - mysql --version
+  - mysql --help
 
 script:
   - vendor/bin/phpunit --configuration phpunit.xml.dist --verbose --coverage-text
