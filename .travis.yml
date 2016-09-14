@@ -10,8 +10,8 @@ install:
   - composer -vvv install
 
 before_script:
-  - phpenv config-add test/travis.ini
-  - php -i | grep timezone
+  - phpenv config-add test/arbitraryname.ini
+  - php -i
 
 script:
   - vendor/bin/phpunit -v -c "phpunit${PHPUNIT_XML}.xml.dist" --coverage-text

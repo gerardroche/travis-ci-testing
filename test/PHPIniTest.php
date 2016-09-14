@@ -21,6 +21,7 @@ class PHPIniTest extends \PHPUnit_Framework_TestCase
 
     public function testTimezone()
     {
+        var_dump(explode(',', php_ini_scanned_files()));
         var_dump(ini_get('date.timezone'));
         $this->assertSame('UTC', ini_get('date.timezone'));
     }
