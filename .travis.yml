@@ -9,8 +9,3 @@ install:
 
 script:
   - vendor/bin/phpunit --verbose
-
-cache:
-  directories:
-    - $HOME/.cache/composer/files
-    - $HOME/.composer/cache/files
