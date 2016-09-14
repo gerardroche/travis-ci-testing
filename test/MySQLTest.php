@@ -53,4 +53,12 @@ class MySQLTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame('', self::$pdo->query('SELECT @@SESSION.sql_mode')->fetchColumn());
     }
+
+    public function testCharacterSets()
+    {
+        $results = self::$pdo->query('SHOW VARIABLES WHERE Variable_name LIKE \'character\_set\_%\' OR Variable_name LIKE \'collation%\';')->fetchAll();
+        var_dump($results);
+
+        $this->assertTrue(true);
+    }
 }
