@@ -8,6 +8,8 @@ services:
 
 before_install:
   - export TZ=America/New_York
+  - echo 'America/New_York' | sudo tee /etc/timezone
+  - sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 install:
   - composer -vvv install
