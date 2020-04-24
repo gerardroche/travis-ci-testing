@@ -59,14 +59,18 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     public function testCharacterSets()
     {
         $results = self::$pdo->query('SHOW VARIABLES WHERE Variable_name LIKE \'character\_set\_%\' OR Variable_name LIKE \'collation%\';')->fetchAll();
+        echo "------------------ CHARACTER SETS ----------------\n";
         var_dump($results);
+        echo "--------------------------------------------------\n";
         $this->assertTrue(true);
     }
 
     public function testVariables()
     {
         $results = self::$pdo->query('SHOW VARIABLES;')->fetchAll();
+        echo "------------------ SHOW VARIABLES ----------------\n";
         var_dump($results);
+        echo "--------------------------------------------------\n";
 
         $this->assertTrue(true);
     }

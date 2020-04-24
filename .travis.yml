@@ -18,7 +18,11 @@ before_script:
   - mysql --help
   - echo "$TZ"
   - cat /etc/timezone
+  - echo 'America/New_York' | sudo tee /etc/timezone
   - ls -al /etc/mysql/
+  - ls -al /etc/mysql/conf.d/
+  - cat /etc/mysql/conf.d/*.cnf
+  - cat /etc/default/locale
   - cat ~/.my.cnf
 
 script:
