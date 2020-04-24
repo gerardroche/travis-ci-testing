@@ -29,6 +29,11 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     public function testTimeZone()
     {
         $this->assertSame('SYSTEM', self::$pdo->query('SELECT @@time_zone')->fetchColumn());
+
+        $results = self::$pdo->query('SHOW VARIABLES LIKE "%time_zone%";')->fetchAll();
+        echo "\n--------------------- TIME ZONE ----------------\n";
+        var_dump($results);
+        echo "--------------------------------------------------\n";
     }
 
     public function testGlobalTimeZone()

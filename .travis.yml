@@ -6,10 +6,14 @@ php:
 services:
   - mysql
 
+before_install:
+  - export TZ=America/New_York
+
 install:
   - composer -vvv install
 
 before_script:
+  - echo "$COMPOSER_BIN_DIR"
   - phpenv config-add test/travis_90.ini
   - php --ini
   - php -i
@@ -18,7 +22,6 @@ before_script:
   - mysql --help
   - echo "$TZ"
   - cat /etc/timezone
-  - echo 'America/New_York' | sudo tee /etc/timezone
   - ls -al /etc/mysql/
   - ls -al /etc/mysql/conf.d/
   - cat /etc/mysql/conf.d/*.cnf
