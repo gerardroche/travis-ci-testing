@@ -48,17 +48,18 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
 
     public function testSQLMode()
     {
-        $this->assertSame('', self::$pdo->query('SELECT @@sql_mode')->fetchColumn());
+        $this->assertSame('ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION',
+            self::$pdo->query('SELECT @@sql_mode')->fetchColumn());
     }
 
     public function testGlobalSQLMode()
     {
-        $this->assertSame('', self::$pdo->query('SELECT @@GLOBAL.sql_mode')->fetchColumn());
+        $this->assertSame('ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION', self::$pdo->query('SELECT @@GLOBAL.sql_mode')->fetchColumn());
     }
 
     public function testSessionSQLMode()
     {
-        $this->assertSame('', self::$pdo->query('SELECT @@SESSION.sql_mode')->fetchColumn());
+        $this->assertSame('ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION', self::$pdo->query('SELECT @@SESSION.sql_mode')->fetchColumn());
     }
 
     public function testCharacterSets()
