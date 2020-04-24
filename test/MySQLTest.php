@@ -32,7 +32,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
 
         $results = self::$pdo->query('SHOW VARIABLES LIKE "%time_zone%";')->fetchAll();
         echo "\n--------------------- TIME ZONE ----------------\n";
-        var_dump($results);
+        print_r($results);
         echo "--------------------------------------------------\n";
     }
 
@@ -65,7 +65,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     {
         $results = self::$pdo->query('SHOW VARIABLES WHERE Variable_name LIKE \'character\_set\_%\' OR Variable_name LIKE \'collation%\';')->fetchAll();
         echo "------------------ CHARACTER SETS ----------------\n";
-        var_dump($results);
+        print_r($results);
         echo "--------------------------------------------------\n";
         $this->assertTrue(true);
     }
@@ -74,7 +74,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     {
         $results = self::$pdo->query('SHOW VARIABLES;')->fetchAll();
         echo "------------------ SHOW VARIABLES ----------------\n";
-        var_dump($results);
+        print_r($results);
         echo "--------------------------------------------------\n";
 
         $this->assertTrue(true);
