@@ -7,16 +7,12 @@ services:
   - mysql
 
 before_install:
-  - export TZ=America/New_York
-  - echo 'America/New_York' | sudo tee /etc/timezone
-  - sudo dpkg-reconfigure --frontend noninteractive tzdata
+  - export TZ=Australia/Melbourne
 
 install:
   - composer -vvv install
 
 before_script:
-  - echo 'America/New_York' | sudo tee /etc/timezone
-  - sudo dpkg-reconfigure --frontend noninteractive tzdata
   - echo "$COMPOSER_BIN_DIR"
   - phpenv config-add test/travis_90.ini
   - php --ini
