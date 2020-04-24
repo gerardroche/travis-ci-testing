@@ -1,10 +1,10 @@
 {
     "name": "gerardroche/travis-ci-testing",
     "require": {
-        "php": "^5.5"
+        "php": "^7.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8"
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {

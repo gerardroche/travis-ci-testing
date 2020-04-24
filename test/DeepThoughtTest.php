@@ -2,7 +2,7 @@
 
 namespace GerardRoche\TravisCITesting;
 
-class DeepThoughtTest extends \PHPUnit_Framework_TestCase
+class DeepThoughtTest extends \PHPUnit\Framework\TestCase
 {
     public function testWhatIsAnswerToTheUltimateQuestionOfLifeTheUniverseAndEverything()
     {
