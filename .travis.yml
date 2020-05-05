@@ -15,7 +15,7 @@ install:
 
 before_script:
   - sed -i 's/utf8/utf8mb4/' ~/.my.cnf
-  - printf "\n\n[mysqld]\ncharacter-set-server = utf8mb4\ncollation-server = utf8mb4_unicode_ci\n" >> ~/.my.cnf
+  - printf "\n\n[mysqld]\ncharacter-set-server = utf8mb4\ncollation-server = utf8mb4_unicode_ci\ndefault-time-zone = +03:00\n" >> ~/.my.cnf
   - cat ~/.my.cnf
   - sudo service mysql restart
   - mysql --help
