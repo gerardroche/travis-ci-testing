@@ -12,7 +12,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     {
         if (self::$pdo === null) {
             $pdo = new PDO(
-                'mysql:charset=utf8',
+                'mysql:host=localhost',
                 DBUNIT_USERNAME,
                 DBUNIT_PASSWORD
             );
