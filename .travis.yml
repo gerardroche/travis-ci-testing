@@ -10,7 +10,7 @@ before_install:
   - export TZ="Australia/Melbourne"
   - mysql --help
   - sed -i 's/utf8/utf8mb4/' ~/.my.cnf
-  - echo "\n\n[mysqld]\ncharacter-set-server = utf8\ncollation-server = utf8_unicode_ci\n" >> ~/.my.cnf
+  - echo "\n\n[mysqld]\ncharacter-set-server = utf8mb4\ncollation-server = utf8mb4_unicode_ci\n" >> ~/.my.cnf
   - cat ~/.my.cnf
   - mysql --help
   - sudo service mysql restart
