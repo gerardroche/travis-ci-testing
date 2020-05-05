@@ -10,7 +10,7 @@ before_install:
   - export TZ="Australia/Melbourne"
   - mysql --help
   - sed -i 's/utf8/utf8mb4/' ~/.my.cnf
-  - cp -v mysql.cnf /etc/mysql/conf.d/90-my.cnf
+  - sudo cp -v mysql.cnf /etc/mysql/conf.d/90-my.cnf
   - sudo service mysql restart
   - mysql --help
 
