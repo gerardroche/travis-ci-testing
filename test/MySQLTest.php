@@ -12,7 +12,7 @@ class MySQLTest extends \PHPUnit\Framework\TestCase
     {
         if (self::$pdo === null) {
             $pdo = new PDO(
-                'mysql:host=localhost',
+                'mysql:host='.DBUNIT_HOST,
                 DBUNIT_USERNAME,
                 DBUNIT_PASSWORD
             );

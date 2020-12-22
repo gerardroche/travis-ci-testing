@@ -20,6 +20,7 @@
         <ini name="log_errors" value="0" />
         <ini name="memory_limit" value="10M" />
 
+        <const name="DBUNIT_HOST" value="locahost" />
         <const name="DBUNIT_USERNAME" value="root" />
         <const name="DBUNIT_PASSWORD" value="" />
     </php>

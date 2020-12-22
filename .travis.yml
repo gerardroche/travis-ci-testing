@@ -32,7 +32,7 @@ before_script:
   - cat ~/.my.cnf
 
 script:
-  - vendor/bin/phpunit --configuration phpunit.xml.dist --verbose --coverage-text
+  - vendor/bin/phpunit -v -c phpunit.xml.dist --coverage-text
 
 # cache:
 #   directories:
